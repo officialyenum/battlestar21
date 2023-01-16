@@ -1,0 +1,17 @@
+.footer {
+    clear: both;
+    background: rgba(0, 0, 0, 0.2);
+    padding: 5px 10px;
+    z-index: 50;
+    height: 50px;
+}
+
+.footer p {
+    font-family: 'Poppins', Helvetica, Arial, sans-serif;
+    font-size: 75%;
+    text-align: right;
+}
+
+.footer a {
+    color: #807c72;
+}

@@ -1,0 +1,8 @@
+.header {
+    width: 100%;
+    background-image: url("../../assets/bg.jpg");
+    padding: 0px 0px 0px 0px;
+    height: 100px;
+    z-index: 50;
+    margin: 10px 0px 10px 0px;
+}

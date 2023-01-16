@@ -49,7 +49,7 @@ This project is hosted on [netlify](https://www.netlify.com/)
 
 ### Limitations
 -   Authentication is not implemented
--   Battle History is not implemented
+-   Battle History is not Recorded
 -   Testing is not implemented
 -   Documentation is not implemented
 

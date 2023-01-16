@@ -1,0 +1,22 @@
+.wrapper {
+    width: 960px;
+    margin: 0px auto;
+    background-image: url("../../assets/bg.jpg");
+    background-size: cover;
+    text-align: left;
+}
+
+.main-story {
+    height: 570px;
+}
+
+.intro {
+    clear: left;
+    font-size: 90%;
+    line-height: 1.4rem;
+}
+
+.date {
+    font-size: 75%;
+    color: #b5c1ad;
+}
