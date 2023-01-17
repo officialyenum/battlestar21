@@ -5,16 +5,19 @@
 #content {
   overflow: auto;
 }
-#nav, #feature, #footer {
+#nav,
+#feature,
+#footer {
   margin: 1%;
 }
 
-li{
+li {
   display: inline;
   padding: 5px;
 }
 
-#nav, #feature {
+#nav,
+#feature {
   background-color: #efefef;
   padding: 0.5em, 0;
 }
@@ -23,4 +26,12 @@ li{
   height: 10em;
   margin-bottom: 1em;
   background-color: #efefef;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 100vh;
 }

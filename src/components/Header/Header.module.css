@@ -1,8 +1,19 @@
 .header {
-    width: 100%;
-    background-image: url("../../assets/bg.jpg");
-    padding: 0px 0px 0px 0px;
-    height: 100px;
-    z-index: 50;
-    margin: 10px 0px 10px 0px;
+  width: 95%;
+  height: 100%;
+  display: flex;
+  margin: 0 auto;
+  align-items: center;
+  /* background-color: orange; */
+  justify-content: space-between;
+}
+
+.headerWrapper {
+  width: 100%;
+  background-image: url("../../assets/bg.jpg");
+  background-repeat: no-repeat;
+  /* background-position: initial; */
+  background-position: -10px -10px;
+  height: 10vh;
+  /* background-color: green; */
 }
