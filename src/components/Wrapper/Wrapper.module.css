@@ -4,9 +4,13 @@
   margin: 0px auto;
   background-image: url("../../assets/bg.jpg");
   background-size: cover;
-  /* background-position: center; */
+  transition: 0.8s ease;
   text-align: left;
   position: relative;
+}
+
+.wrapper-active {
+  background-position: center;
 }
 
 .main-story {
