@@ -39,13 +39,14 @@ This is the basic flow of the application.
 
 
 ### Documentation
--   No Documentation 
+
+-   Please click [here](https://documenter.getpostman.com/view/8719009/2s8ZDVb48d) to access the Postman Collection
 
 ### Deployment
+This project is hosted on [vercel](https://vercel.com/)
 
-This project is hosted on [netlify](https://www.netlify.com/)
-
--   Please click [here](https://battlestar21.yenum.dev/) to access the hosted application
+-   Please click [here](https://battlestar21.vercel.app/) to access the hosted application
+-   Please click [here](https://battlestar21-api.vercel.app/) to access the hosted api Built with (Node, Express, Typescript)
 
 ### Limitations
 -   Authentication is not implemented
