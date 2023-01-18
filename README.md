@@ -31,6 +31,11 @@ This is a Battle Simulation Game using AI21 language model for  AI21 Labs Hackat
 
 This is the basic flow of the application.
 -   Generate Your Character
+        In this stage, the user designates values for various features of their intended players; each player can have one and only one player at a time. However, they are allowed to generate at most 3 "game characters" throughout the lifetime of the game. To generate a player, the user sets values for the following parameters: 
+        1. Player's strength
+        2. Player's speed
+        3. Player's endurance
+        4. 
 -   Battle with other Characters through Simulations
 -   Get Results after simulations
 
