@@ -33,19 +33,27 @@ export const AboutScreen = () => {
       <Header />
       <div className={`${classes.mainContainer2} container_12`}>
         <div className={classes.aboutUsContainer}>
-          <br/>
+          <br />
           <h3>About Battle 21</h3>
           <p>
             This is a Battle Simulation Game using AI21 language model for AI21
             Labs Hackathon taking place on January 13-20 2023.
           </p>
-          <br/>
+          <br />
           <h4> Features </h4>
-          <br/>
-          <p> Generate character, Predict Who Wins a Battle, Simulate battle or story.</p>
-          <p> More Features Coming like Logged in Users owning their own characters, Marketplace, Multiplayer, Character Training, etc...</p>
+          <br />
+          <p>
+            {" "}
+            Generate character, Predict Who Wins a Battle, Simulate battle or
+            story.
+          </p>
+          <p>
+            {" "}
+            More Features Coming like Logged in Users owning their own
+            characters, Marketplace, Multiplayer, Character Training, etc...
+          </p>
         </div>
-        <div className={classes.aboutUsContainer}>
+        <div className={classes.teamHeader}>
           <h3>The Team</h3>
         </div>
         <div className={classes.teamContainer}>
