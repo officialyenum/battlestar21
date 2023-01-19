@@ -12,10 +12,10 @@ export const useGetAllCharacters = () => {
     setIsLoading(true);
     try {
       const { data } = await httpClient.get(
-        `characters?page=${currentPage}&count=9`
+        `characters?page=${currentPage}&count=6`
       );
       if (data) {
-        setCharacters(data?.data);
+        setCharacters(data?.data?.sort((a, b) => (a.wins < b.wins ? 1 : -1)));
         setIsLoading(true);
         setHasNextPage(data?.hasNextPage);
         setHasPrevPage(data?.hasPreviousPage);

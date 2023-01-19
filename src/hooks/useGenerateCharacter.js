@@ -6,9 +6,10 @@ export const useGenerateCharacter = () => {
   const [isLoadingUserCharacter, setIsLoadingUserCharacter] = useState(false);
   const [isLoadingComputerCharacter, setIsLoadingComputerCharacter] =
     useState(false);
+  const [typedLength, setTypedLength] = useState(1);
   const [character, setCharacter] = useState(null);
   const [computerCharacter, setComputerCharacter] = useState(null);
-  const [errors, setErrors] = useState({ computer: "", user: "" });
+  const [error, setError] = useState("");
   const [isLoadingFight, setIsLoadingFight] = useState(false);
   const [simulation, setSimulation] = useState("");
   const [showResult, setShowResult] = useState(false);
@@ -30,7 +31,7 @@ export const useGenerateCharacter = () => {
       }
     } catch (error) {
       console.log(error);
-      //   setErrors((prev) => ({ ...prev, user: error }));
+      setError(error.message);
     } finally {
       setIsLoadingUserCharacter(false);
     }
@@ -47,7 +48,7 @@ export const useGenerateCharacter = () => {
       console.log("computer-character=>,", data);
     } catch (error) {
       console.log(error);
-      //   setErrors((prev) => ({ ...prev, computer: error }));
+      setError(error.message);
     } finally {
       setIsLoadingComputerCharacter(false);
     }
@@ -68,7 +69,7 @@ export const useGenerateCharacter = () => {
       }
     } catch (error) {
       console.log(error);
-      //   setErrors((prev) => ({ ...prev, user: error }));
+      setError(error.message);
     } finally {
       setIsLoadingUserRandomCharacter(false);
     }
@@ -82,7 +83,7 @@ export const useGenerateCharacter = () => {
         characterTwoId: computerCharacter?._id,
       });
       if (data) {
-        setSimulation(data?.data?.story);
+        setSimulation(data?.data?.story?.trim());
         setWinner(data?.data?.winner);
       }
       console.log("game simulation => ,", data);
@@ -100,20 +101,41 @@ export const useGenerateCharacter = () => {
     setUserSelectedCharacter(char);
   };
 
-  const onTypeDone = () => {
-    setTimeout(() => {
-      setShowResult(true);
-    }, 2500);
+  // const onTypeDone = () => {
+  //   console.log("Typeing DONe");
+  //   setTimeout(() => {
+  //     setShowResult(true);
+  //   }, 2500);
+  // };
+
+  const handleType = () => {
+    setTypedLength(typedLength + 1);
+    console.log("typing", typedLength, simulation?.trim().length);
+    if (typedLength === simulation.trim().length) {
+      setTimeout(() => {
+        setShowResult(true);
+      }, 2500);
+    }
   };
 
   const onCloseModal = () => {
     setShowResult(false);
   };
 
+  const resetGame = () => {
+    setTypedLength(1);
+    setUserSelectedCharacter(null);
+    setCharacter(null);
+    setShowResult(false);
+    setSimulation("");
+    setComputerCharacter(null);
+    setWinner(null);
+  };
+
   return {
     generate,
     character,
-    errors,
+    error,
     isLoadingComputerCharacter,
     isLoadingUserCharacter,
     computerCharacter,
@@ -122,11 +144,13 @@ export const useGenerateCharacter = () => {
     simulateFight,
     isLoadingFight,
     simulation,
-    onTypeDone,
+    // onTypeDone,
     showResult,
     onCloseModal,
     generateUserRandomCharacter,
     isLoadingUserRandomCharacter,
     winner,
+    handleType,
+    resetGame,
   };
 };

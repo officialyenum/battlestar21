@@ -20,14 +20,16 @@ export const AllCharactersScreen = () => {
       <Header />
       <div className={`${classes.mainContainer} container_12`}>
         <div className={classes.section_header}>
-          <h2>Characters</h2>
+          <h2>21 Top battle Stars</h2>
         </div>
         <div className={classes.characters}>
-          {isLoading && characters?.length < 0 ? (
-            <p>Loading</p>
+          {isLoading ? (
+            <div className={classes.loader}>
+              <p>Loading....</p>
+            </div>
           ) : (
             characters?.map((player) => (
-              <PlayerCard hideStatus={true} character={player} />
+              <PlayerCard key={player?._id} character={player} />
             ))
           )}
           <div className={classes.pagination_container}>
@@ -37,6 +39,7 @@ export const AllCharactersScreen = () => {
               isDisabled={!hasPrevPage}
               color={hasPrevPage ? "orange" : ""}
             />
+            <p className={classes.currentPage}>{currentPage}</p>
             <Button
               text="Next"
               onClick={() => handlePageIncrement()}
