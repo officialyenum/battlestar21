@@ -11,19 +11,22 @@ export const Wrapper = () => {
     character,
     generate,
     computerCharacter,
-    // errors,
+    error,
     isLoadingComputerCharacter,
     isLoadingUserCharacter,
     handleSelectCharacter,
     userSelectedCharacter,
     simulateFight,
     simulation,
-    onTypeDone,
+    winner,
+    // onTypeDone,
     showResult,
     onCloseModal,
     generateUserRandomCharacter,
     isLoadingUserRandomCharacter,
     isLoadingFight,
+    handleType,
+    resetGame,
   } = useGenerateCharacter();
 
   return (
@@ -37,7 +40,7 @@ export const Wrapper = () => {
               <PlayerCard
                 selectedCharacter={userSelectedCharacter}
                 handleSelectCharacter={handleSelectCharacter}
-                allowSelect={character && computerCharacter}
+                allowSelect={character && computerCharacter && !simulation}
                 character={character}
               />
               {isLoadingComputerCharacter ? (
@@ -48,7 +51,7 @@ export const Wrapper = () => {
                 <PlayerCard
                   selectedCharacter={userSelectedCharacter}
                   handleSelectCharacter={handleSelectCharacter}
-                  allowSelect={character && computerCharacter}
+                  allowSelect={character && computerCharacter && !simulation}
                   character={computerCharacter}
                 />
               ) : null}
@@ -102,12 +105,9 @@ export const Wrapper = () => {
                     words={[simulation]}
                     loop={1}
                     cursor
-                    cursorStyle="_"
                     typeSpeed={40}
-                    deleteSpeed={50}
                     delaySpeed={1000}
-                    onLoopDone={onTypeDone}
-                    // onType={handleType}
+                    onType={handleType}
                   />
                 </div>
               </div>
@@ -118,9 +118,11 @@ export const Wrapper = () => {
         <div className={`${classes.intro}`}>
           <p className={classes.date}>{new Date().toLocaleDateString()}</p>
         </div>
-        {/**<div className={`${classes.errorContainer}`}>
-          <p className={classes.errorMessage}>{errors.computer}</p>
-        </div> */}
+        {error && (
+          <div className={`${classes.errorContainer}`}>
+            <p className={classes.errorMessage}>{error}</p>
+          </div>
+        )}
         {character && computerCharacter && !simulation && (
           <div className={`${classes.infoContainer}`}>
             <p className={classes.infoMessage}>
@@ -129,7 +131,12 @@ export const Wrapper = () => {
           </div>
         )}
       </div>
-      <GameCompleteModal isOpen={showResult} onClose={onCloseModal} />
+      <GameCompleteModal
+        isOpen={showResult}
+        onClose={resetGame}
+        selected={userSelectedCharacter}
+        winner={winner}
+      />
     </div>
   );
 };

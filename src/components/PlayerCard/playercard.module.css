@@ -40,3 +40,10 @@
 .winlossRed {
   background-color: #ef2207;
 }
+
+.readmore {
+  margin-left: 0.3rem;
+  color: #f48005;
+  cursor: pointer;
+  font-style: italic;
+}
