@@ -20,7 +20,7 @@ export const AllCharactersScreen = () => {
       <Header />
       <div className={`${classes.mainContainer} container_12`}>
         <div className={classes.section_header}>
-          <h2>21 Top battle Stars</h2>
+          <h2>Top battle Star Fighters</h2>
         </div>
         <div className={classes.characters}>
           {isLoading ? (

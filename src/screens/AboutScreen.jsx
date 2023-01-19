@@ -40,7 +40,7 @@ export const AboutScreen = () => {
             Labs Hackathon taking place on January 13-20 2023.
           </p>
           <br />
-          <h4> Features </h4>
+          <h4> FEATURES </h4>
           <br />
           <p>
             {" "}

@@ -31,7 +31,7 @@ export const BattleScreen = () => {
       <Header />
       <div className={`${classes.mainContainer} container_12`}>
         <div className={classes.section_header}>
-          <h2>21 Top battles</h2>
+          <h2>Latest battles</h2>
         </div>
         <div className={classes.characters}>
           {isLoading && (
