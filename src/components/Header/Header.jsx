@@ -3,7 +3,7 @@ import Logo from "../Logo/Logo";
 import Nav from "../Nav/Nav";
 import classes from "./Header.module.css";
 
-const Header = () => {
+export const Header = () => {
   return (
     <div className={`container_12`}>
       <div className={`${classes.headerWrapper}`}>
@@ -15,5 +15,3 @@ const Header = () => {
     </div>
   );
 };
-
-export default Header;

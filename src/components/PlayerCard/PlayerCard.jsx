@@ -7,22 +7,27 @@ export const PlayerCard = ({
   allowSelect,
   selectedCharacter,
   handleSelectCharacter,
+  hideStatus,
 }) => {
   return (
     <div className={classes.container}>
       <div>
         <p className={classes.playerName}>{character?.name}</p>
         <em className={classes.playerBio}>{character?.bio}</em>
-        <div className={classes.winLossFlex}>
-          <div className={classes.winLossContainer}>
-            <p>WINS: </p>
-            <span>{character?.wins}</span>
+        {!hideStatus && (
+          <div className={classes.winLossFlex}>
+            <div className={classes.winLossContainer}>
+              <p>WINS: </p>
+              <span>{character?.wins}</span>
+            </div>
+            <div
+              className={`${classes.winLossContainer} ${classes.winlossRed}`}
+            >
+              <p>LOSS: </p>
+              <span>{character?.loss}</span>
+            </div>
           </div>
-          <div className={`${classes.winLossContainer} ${classes.winlossRed}`}>
-            <p>LOSS: </p>
-            <span>{character?.loss}</span>
-          </div>
-        </div>
+        )}
         {allowSelect && (
           <div className={classes.winLossFlex}>
             <Button
