@@ -64,3 +64,7 @@ This project is hosted on [vercel](https://vercel.com/)
 -   Allow Players Swap and trade their Characters 
 -   Battle Leader board from top winners to lowest winners
 -   Implement Image Generation to Visualize the Battle Simulations.
+
+
+## More Info
+- Please click here [Battle Star 21 API](https://github.com/officialyenum/battlestar21-api.git) to access the Node Express Api Repository
