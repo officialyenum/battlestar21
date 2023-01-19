@@ -65,9 +65,8 @@ This project is hosted on [vercel](https://vercel.com/)
 
 ### Next Steps
 -   Authentication will be implemented so players can have 1-5 characters dey can battle with
--   Probably Earn Points for every battle won
--   Make it Multiplayer
--   Enable Different Kinds of Battle simulations asides 1v1 
+-   Probably Earn Points for every battle won (the battle star token)
+-   Make it Multiplayer & Enable Different Kinds of Battle simulations asides 1v1 
 -   Upgrade Character Power up with points 
 -   Player Battle History
 -   Allow Players Swap and trade their Characters 
