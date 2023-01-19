@@ -18,8 +18,8 @@ export const PlayerCard = ({
       <div>
         <p className={classes.playerName}>{character?.name}</p>
         <em className={classes.playerBio}>
-          {showMore ? character?.bio : truncate(character?.bio, 300)}
-          {character?.bio.length > 300 && (
+          {showMore ? character?.bio : truncate(character?.bio, 200)}
+          {character?.bio.length > 200 && (
             <span className={classes.readmore} onClick={() => setShowMore(!showMore)}>
               {showMore ? "Show Less" : "Read More"}
             </span>
