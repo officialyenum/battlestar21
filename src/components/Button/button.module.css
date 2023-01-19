@@ -9,6 +9,7 @@
   cursor: pointer;
   border: 1px solid #fff;
   padding: 1rem;
+  width: 100%;
 }
 
 .button-slanted {
@@ -25,8 +26,7 @@
 
 .button-slanted:hover {
   border: 1px solid;
-  box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.2),
-    0 0 20px rgba(0, 0, 0, 0.2);
+  box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.2), 0 0 20px rgba(0, 0, 0, 0.2);
   outline-color: rgba(255, 255, 255, 0);
   outline-offset: 15px;
   text-shadow: 1px 1px 2px #427388;
@@ -45,4 +45,12 @@
 
 .button-orange {
   background-color: #f48005 !important;
+}
+
+.button-02 {
+  opacity: 0.2;
+}
+
+.button-01 {
+  opacity: 1;
 }

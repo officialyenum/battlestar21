@@ -4,6 +4,7 @@
   margin: 0px auto;
   background-image: url("../../assets/bg.jpg");
   background-size: cover;
+  background-repeat: no-repeat;
   transition: 0.8s ease;
   text-align: left;
   position: relative;
@@ -17,6 +18,14 @@
   height: 100%;
   display: flex;
   align-items: center;
+}
+
+.players {
+  width: 92%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .user-character-container {
@@ -49,7 +58,7 @@
   display: flex;
   flex-direction: column;
   align-items: flex-end;
-  padding: 2rem 30px;
+  padding: 2rem 4rem;
   width: 100%;
 }
 
@@ -76,4 +85,56 @@
   transform: skewX(-20deg);
   outline: none;
   color: #fff;
+}
+
+.opponent_player_loading {
+  background: rgba(0, 0, 0, 0.8);
+  padding: 1rem 2rem;
+  border-radius: 0.3rem;
+}
+
+.button_center {
+  width: 50%;
+  margin: 0 auto;
+  margin-top: 3rem;
+}
+
+.simulationContainer {
+  width: 100%;
+  height: 100%;
+  /* background-color: red; */
+  position: relative;
+  padding: 3rem;
+}
+.simulationContainer::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.9);
+}
+
+.simulation {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  position: relative;
+  z-index: 30;
+}
+
+.infoContainer {
+  position: absolute;
+  left: 50%;
+  top: 1rem;
+  transform: translateX(-50%);
+  background-color: #f48005;
+  padding: 1rem;
+  border-radius: 0.3rem;
+}
+
+.infoMessage {
+  font-size: 0.9rem;
+  font-weight: 300;
 }
