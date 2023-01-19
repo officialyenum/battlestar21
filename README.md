@@ -34,10 +34,10 @@ This is the basic flow of the application.
 Encompasses three generate endpoints contained in the Node Server and broken down into the three below:
     1. Generate character: A character is a game agent that is created by the A21 AI model and has two basic features [ name and bio]. Character name and       bio were generated using the 'j1-jumbo(178B)' model; character bio is generated based on player's profession, hand-to-hand combat, primary skill, and       special skills. This is an automated process based on data used to train the 'j1-jumbo (178B)' model. 
     2. Generate stage: the stage of play or battle is generated using the 'j1-grande-instruct(beta)(17B)' model.
-    3. Generate battle or narrartion: this is same as the story or battle narration that explains what happens in a given battle. AS a visual being, this       can be used to visualize how the game would be played in real life. The 'j1-large (7.5B)' model was used to generate narrations following successful        training; and the players are highlighted together with the battle stage, battle winner, and battle scenario.
-      
+    3. Generate battle or story: this is same as the story or battle narration that explains what happens in a given battle. AS a visual being, this       can be used to visualize how the game would be played in real life. The 'j1-large (7.5B)' model was used to generate narrations following successful        training; and the players are highlighted together with the battle stage, battle winner, and battle scenario.
+          
 -   Battle with other Characters through Simulations
-    The battle simulation comes after the 'parameter generations' are done. Here, the user makes a prediction of the battle's winner (all generated characters are assigned [total wina] and [total losses] of 0 and if same characters are randomly generated and selected, this stage is terminated since same characters cannot fight themselves). 
+    The battle simulation comes after the 'parameter generations' are done. Here, the user makes a prediction of the battle's winner (all generated characters are assigned [total wins] and [total losses] of 0 and if same characters are randomly generated and selected, this stage is terminated since same characters cannot fight themselves). 
     Once the battle is successfully simulated, the user is awarded the 'battle star token' [this will be implemented in future modifications due to time constraint in this stage] and the award will be based on users who fulfilled the 'proof of stake' concept of the application - that is they stake some 'eth' to play the simulation and if their prediction is correct, they are rewarded (after submitting their 'proof of work'). 
     
 -   Get Results after simulations
