@@ -75,3 +75,20 @@ This project is hosted on [vercel](https://vercel.com/)
 
 ## More Info
 - Please click here [Battle Star 21 API](https://github.com/officialyenum/battlestar21-api.git) to access the Node Express Api Repository
+
+Contribute
+----------
+
+- Issue Tracker: https://www.github.com/officialyenum/battlestar21-api/issues
+- Source Code: https://www.github.com/officialyenum/battlestar21-api
+
+Support
+-------
+
+If you are having issues, please let me know.
+I have a mailing list located at: oponechukwuyenum@gmail.com OR oponechukwuyenum@icloud.com
+
+License
+-------
+
+The project is licensed under the MIT license.
