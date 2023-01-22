@@ -12,10 +12,10 @@ This is a Battle Simulation Game using AI21 language model for  AI21 Labs Hackat
     -   [Documentation](#documentation)
     -   [Deployment](#deployment)
     -   [Limitations](#limitations)
-    -   [More Info](#more-info)
-    -   [Contribute](#contribute)
-    -   [Support](#support)
-    -   [License](#license)
+-   [More Info](#more-info)
+-   [Contribute](#contribute)
+-   [Support](#support)
+-   [License](#license)
 
 ## Technologies
 -   [React JS](https://reactjs.org/) - Runtime Environment
