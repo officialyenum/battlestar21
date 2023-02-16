@@ -38,7 +38,7 @@ export const useGenerateCharacter = () => {
   };
 
   const generateComputerCharacter = async (id) => {
-    console.log("character idf fpor compuiter =>", id);
+    console.log("character id for computer =>", id);
     setIsLoadingComputerCharacter(true);
     try {
       const { data } = await httpClient.get(`characters/random/${id}`);

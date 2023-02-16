@@ -12,7 +12,7 @@ export const useGetAllBattles = () => {
     setIsLoading(true);
     try {
       const { data } = await httpClient.get(
-        `battles?page=${currentPage}&count=13`
+        `battles?page=${currentPage}&count=10`
       );
       if (data) {
         setBattles(data?.data);
